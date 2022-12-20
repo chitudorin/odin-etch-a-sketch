@@ -20,6 +20,15 @@ function createRow() {
   return row;
 }
 
+function resetPlayArea() {
+  let elements = document.querySelectorAll("div.element");
+  elements.forEach((element) => {
+    element.style.backgroundColor = "red";
+  });
+}
+
+document.querySelector("button").addEventListener("click", resetPlayArea);
+
 elements = document.querySelectorAll("div.element");
 
 elements.forEach((element) => {
@@ -27,21 +36,3 @@ elements.forEach((element) => {
     element.style.backgroundColor = "black";
   });
 });
-
-// const container = document.createElement("div");
-// container.classList.add("container");
-
-// function creaza() {
-//   for (let i = 0; i <= 15; i++) {
-//     row = document.createElement("div");
-//     row.classList.add("row");
-//     row = document.querySelector("div.row");
-//     for (let j = 0; j <= 15; j++) {
-//       row.appendChild(document.createElement("div").classList.add("element"));
-//     }
-//     container.appendChild(row);
-//   }
-//   document.body.appendChild(container);
-// }
-
-// creaza();
