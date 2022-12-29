@@ -3,12 +3,12 @@ container = document.querySelector("div.container");
 for (i = 0; i <= 14; i++) {
   row = createRow();
   for (j = 0; j <= 14; j++) {
-    row.appendChild(createElement());
+    row.appendChild(createNewElement());
   }
   container.appendChild(row);
 }
 
-function createElement() {
+function createNewElement() {
   let element = document.createElement("div");
   element.classList.add("element");
   return element;
