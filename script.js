@@ -29,7 +29,10 @@ function promptPlayArea() {
 }
 
 function generatePlayArea(n) {
-    if (n > 100) n = 100;
+    if (n > 100) {
+        alert("Sorry, 100x100 is the maximum resolution. The play area changed to 100x100 instead.")
+        n = 100;
+    }
     for (i = 0; i <= n; i++) {
         let row = createRow();
         for (j = 0; j <= n; j++) {
